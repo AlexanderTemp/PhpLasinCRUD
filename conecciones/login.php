@@ -7,9 +7,9 @@ if ($conn) {
     $query = "SELECT * FROM `usuarios` WHERE email='$email' AND password='$contra'";
     $res = mysqli_query($conn, $query);
     if ($res->fetch_row()>0) {
-        header("Location: ../inicio.php");
+        header("Location: ../registrarventa.php");
     } else {
-        echo "No existe";
+        header("Location: ../index.php");
     }
     $conn->close();
 } else {

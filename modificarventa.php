@@ -5,6 +5,14 @@ if (isset($_GET['id'])) {
     $sql = "SELECT * FROM `ventas` WHERE id='$id'";
     $res = mysqli_query($conn, $sql);
     $registro = mysqli_fetch_array($res);
+    $cantidad=$registro['cantidad'];
+    $nombre=$registro['fruta'];
+    $req="SELECT * FROM `stock` WHERE nombre='$nombre'";
+    $req=mysqli_query($conn, $req);
+    $req=mysqli_fetch_assoc($req);
+    $restaurar=$cantidad+$req['cantidad'];
+    $req= "UPDATE `stock` SET cantidad='$restaurar' WHERE nombre='$nombre'";
+    $req=mysqli_query($conn, $req);
 }
 ?>
 <div class="card mb-3">
@@ -40,7 +48,7 @@ if (isset($_GET['id'])) {
 
             <div class="form-group">
                 <label class="form-label mt-4">Cantidad</label>
-                <input type="text" class="form-control" name="precio" aria-describedby="preciounitario" value="<?php echo $registro['cantidad'] ?>">
+                <input type="text" class="form-control" name="cantidad" aria-describedby="cantidad" value="<?php echo $registro['cantidad'] ?>">
             </div>
             <br>
             <button type="submit" class="btn btn-primary" name="modificar">Modificar registro</button>

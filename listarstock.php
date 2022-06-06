@@ -10,7 +10,7 @@ include "conecciones/conn.php"; ?>
       <th scope="col">Nro</th>
       <th scope="col">Nombre fruta</th>
       <th scope="col">Cantidad</th>
-      <th scope="col" style="width: 7rem;">Precio unitario (Bs)</th>
+      <th scope="col">Precio unitario (Bs)</th>
       <th scope="col">Opciones</th>
     </tr>
   </thead>

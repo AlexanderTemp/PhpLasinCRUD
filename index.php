@@ -8,10 +8,10 @@
     <title>Document</title>
 </head>
 <body class="vh-100 d-flex justify-content-center align-items-center h-100">
-    <div class="container-fluid h-custom">
+    <div class="container-sm">
         <div class="row justify-content-center align-items-center">
-            <div class="col-md-6 w-50 p-3">
-                <div class="card">
+            <div class="col-md-auto">
+                <div class="card" style="width: 20rem;">
                     <div class="card-header">
                         Iniciar sesion
                     </div>
@@ -26,7 +26,9 @@
                                     <input type="password" class="form-control" id="password" name="password" aria-describedby="cantidadvendida" placeholder="Introduzca su contraseña...">
                                 </div>
                                 <br>
-                                <button type="submit" class="btn btn-primary">Iniciar</button>
+                                <div class="form-group d-flex justify-content-center">
+                                    <button type="submit" class="btn btn-primary">Ingresar</button>
+                                </div>
                         </form>
                     </div>
                 </div>
