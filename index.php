@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/bootstrap.min.css"/>
-    <title>Document</title>
+    <title>Lasin</title>
 </head>
 <body class="vh-100 d-flex justify-content-center align-items-center h-100">
     <div class="container-sm">
