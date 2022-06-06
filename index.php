@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css"/>
     <title>Document</title>
 </head>
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
+<body class="vh-100 d-flex justify-content-center align-items-center h-100">
+    <div class="container-fluid h-custom">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-6 w-50 p-3">
                 <div class="card">
                     <div class="card-header">
                         Iniciar sesion
