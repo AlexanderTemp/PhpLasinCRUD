@@ -1,3 +1,9 @@
+<?php
+    if(isset($_SESSION['user'])){
+        header("Location: ../registrarventa.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

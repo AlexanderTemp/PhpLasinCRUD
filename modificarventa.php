@@ -6,10 +6,12 @@ if (isset($_GET['id'])) {
     $res = mysqli_query($conn, $sql);
     $registro = mysqli_fetch_array($res);
     $cantidad=$registro['cantidad'];
-    $nombre=$registro['fruta'];
-    $req="SELECT * FROM `stock` WHERE nombre='$nombre'";
+    $nombre=$registro['id_fruta'];
+
+    $req="SELECT * FROM `stock` WHERE idstock='$nombre'";
     $req=mysqli_query($conn, $req);
     $req=mysqli_fetch_assoc($req);
+
     $restaurar=$cantidad+$req['cantidad'];
     $req= "UPDATE `stock` SET cantidad='$restaurar' WHERE nombre='$nombre'";
     $req=mysqli_query($conn, $req);

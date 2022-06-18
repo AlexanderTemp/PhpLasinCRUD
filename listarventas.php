@@ -61,7 +61,13 @@ if (isset($_GET['status'])) {
             }
               echo "<th scope='row'>".$row['id']."</th>";
               echo "<td>".$row['cliente']."</td>";
-              echo "<td>".$row['fruta']."</td>";
+              $sql_2 ="SELECT * FROM `stock`"; 
+              $res_2=mysqli_query($conn, $sql_2);
+              foreach($res_2 as $row_2){
+                if($row_2['idstock']==$row['id_fruta']){
+                  echo "<td>".$row_2['nombre']."</td>";
+                }
+              }
               echo "<td>".$row['cantidad']."</td>";
               echo "<td>".$row['total']."</td>";
               echo "<td><a class='btn btn-outline-primary btn-sm' href='modificarventa.php?id=" . $row["id"] . "'><i class='fa-solid fa-pen-to-square'></i></a>

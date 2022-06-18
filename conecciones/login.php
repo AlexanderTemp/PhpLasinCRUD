@@ -7,6 +7,8 @@ if ($conn) {
     $query = "SELECT * FROM `usuarios` WHERE email='$email' AND password='$contra'";
     $res = mysqli_query($conn, $query);
     if ($res->fetch_row()>0) {
+        session_start();
+        $_SESSION['user']=$email;
         header("Location: ../registrarventa.php");
     } else {
         header("Location: ../index.php");

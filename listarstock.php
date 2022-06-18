@@ -32,7 +32,10 @@ if (isset($_GET['status'])) {
   </div>";
   }
 }
+
+echo "<h1>".$_COOKIE['Lasin']."</h1>"
 ?>
+
 <div class="card mb-3">
   <h3 class="card-header">Listar Stock</h3>
 </div>
