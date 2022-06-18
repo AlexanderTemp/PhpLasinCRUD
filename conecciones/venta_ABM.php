@@ -18,9 +18,9 @@
             $sql="INSERT INTO `ventas` (cliente, fruta, cantidad, total) VALUES('$cliente', '$nombre', '$cantidad', '$total')";
             $res=mysqli_query($conn, $sql);
             if($res){
-                header("Location: ../listarventas.php");
+                header("Location: ../listarventas.php?status=success");
             }else{
-                die("Error de conexión: ".mysqli_connect_errno());
+                header("Location: ../listarventas.php?status=error");
             }
         }
     }
